@@ -75,7 +75,7 @@ func GenlCtrlProbeByName(sk *NlSock, name string) (AttrMap, error) {
 								// shold not happen
 							} else if value := info.Get(CTRL_ATTR_FAMILY_NAME); value == nil {
 								// should not happen by kernel
-							} else if string(value.(String)) == name {
+							} else if string(value.(NulString)) == name {
 								ret = info
 							}
 						default:
